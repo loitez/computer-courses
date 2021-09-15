@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Первый курс по компьютерной сборке</title>
+    <title>Курс по компьютерной сборке</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -49,8 +49,8 @@
             <h1 class="main-screen__title">
                 Первый курс по компьютерной сборке
             </h1>
-            <div class="timer">
-                Тут будет таймер
+            <div>
+                <p class="timer" style="font-size:30px"></p>
             </div>
             </div>
         </div>
@@ -63,19 +63,32 @@
         <table class="main-screen__table">
             <tbody>
             <tr class="main-screen__tr">
-                <td class="main-screen__td">Учеников всего:</td>
+                <td class="main-screen__td bottom__text">Учеников всего:</td>
                 <td class="main-screen__td">200</td>
             </tr>
             <tr class="main-screen__tr">
-                <td class="main-screen__td">Успешно закончили курс:</td>
+                <td class="main-screen__td bottom__text">Успешно закончили курс:</td>
                 <td class="main-screen__td">190</td>
             </tr>
             </tbody>
         </table>
         <div class="stats">
-            Тут будет линия и текст
+            <div class="">
+                <p class="bottom__text stats__text">Заработано учениками:</p>
+                <p class="stats__text">400 000₽</p>
+            </div>
+            <div class="rect">
+                <svg width="714" height="6" viewBox="0 0 714 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="714" height="6" fill="white"/>
+                </svg>
+            </div>
+
+            <div class="stats__numbers">
+                <p class="stats__numbers-start">0</p>
+                <p class="stats__numbers-end">1 000 000₽</p>
+            </div>
         </div>
-        </div>
+    </div>
     </div>
 </header>
 <main>
@@ -114,7 +127,7 @@
                         <h3>Итог</h3>
                     </div>
                     <div class="infographic__rectangles">
-                        <svg width="324" height="80" viewBox="0 0 324 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="330" height="80" viewBox="0 0 324 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="324" height="80" fill="url(#paint0_linear)"/>
                             <defs>
                                 <linearGradient id="paint0_linear" x1="33.116" y1="-8.69043e-06" x2="290.668" y2="77.7491" gradientUnits="userSpaceOnUse">
@@ -122,8 +135,7 @@
                                     <stop offset="1" stop-color="#7C6AFA"/>
                                 </linearGradient>
                             </defs>
-                        </svg>
-                        <svg width="324" height="60" viewBox="0 0 324 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        </svg><svg width="330" height="60" viewBox="0 0 324 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="324" height="60" transform="matrix(-1 0 0 1 324 0)" fill="url(#paint0_linear)"/>
                             <defs>
                                 <linearGradient id="paint0_linear" x1="33.116" y1="-6.51782e-06" x2="274.959" y2="97.3423" gradientUnits="userSpaceOnUse">
@@ -131,8 +143,7 @@
                                     <stop offset="1" stop-color="#7C6AFA"/>
                                 </linearGradient>
                             </defs>
-                        </svg>
-                        <svg width="324" height="30" viewBox="0 0 324 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        </svg><svg width="330" height="30" viewBox="0 0 324 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="324" height="30" fill="url(#paint0_linear)"/>
                             <defs>
                                 <linearGradient id="paint0_linear" x1="33.116" y1="-3.25891e-06" x2="203.636" y2="137.27" gradientUnits="userSpaceOnUse">
@@ -140,8 +151,7 @@
                                     <stop offset="1" stop-color="#7C6AFA"/>
                                 </linearGradient>
                             </defs>
-                        </svg>
-                        <svg width="324" height="10" viewBox="0 0 324 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        </svg><svg width="330" height="10" viewBox="0 0 324 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="324" height="10" transform="matrix(-1 0 0 1 324 0)" fill="url(#paint0_linear)"/>
                             <defs>
                                 <linearGradient id="paint0_linear" x1="33.116" y1="-1.0863e-06" x2="74.2476" y2="99.3333" gradientUnits="userSpaceOnUse">
@@ -193,6 +203,7 @@
                     <h2 class="title">Партнеры - топовые бренды</h2>
                 </div>
                 <div class="partners__logos">
+
                     <img src="img/partner-logo.png" alt="Логотип партнера" class="partners__logos-img">
                     <img src="img/partner-logo.png" alt="Логотип партнера" class="partners__logos-img">
                     <img src="img/partner-logo.png" alt="Логотип партнера" class="partners__logos-img">
@@ -294,5 +305,6 @@
         </div>
     </div>
 </footer>
+<script src="js/main.js"></script>
 </body>
 </html>

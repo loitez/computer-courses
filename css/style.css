@@ -16,14 +16,16 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
-    height: 100vh;
     position: relative;
+    height: 960px;
 }
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 40px;
+    width: 1760px;
+    margin: 0 auto;
 }
 .navbar__list {
     display: flex;
@@ -51,8 +53,7 @@ body {
 }
 .header__button {
     background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
-    transition: color .5s ease-in-out,
-    box-shadow .5s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 .header__button:hover {
     background: #fff;
@@ -66,7 +67,7 @@ body {
 .main-screen {
     display: flex;
     justify-content: left;
-    height: 40vh;
+
 }
 .main-screen__content {
     display: flex;
@@ -78,6 +79,8 @@ body {
     font-size: 64px;
     line-height: 90px;
     max-width: 920px;
+    margin-bottom: 0;
+    margin-top: 100px;
 }
 .main-screen__bottom {
     background-color: #121212;
@@ -94,24 +97,83 @@ body {
 }
 .main-screen__button {
     background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+    font-weight: bold;
+    transition: all 1s ease-in-out;
 }
 .main-screen__button:hover {
     background: #fff;
-    color: #451046FF;
+    color: #862088;
     box-shadow:0 0 0 1px #DF5950FF;
-    transition: color .5s ease-in-out,
-    box-shadow .5s ease-in-out;
 }
 .main-screen__table {
     min-width: 250px;
 }
-.main-screen__td:first-of-type {
+.bottom__text {
     opacity: 0.4;
+}
+.stats__text {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.bottom__text.stats__text {
+    margin-right: 30px;
+    margin-top: 0;
+}
+.rect {
+    position: relative;
+}
+.rect::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 40%;
+    height: 6px;
+    background: transparent;
+    background-image: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+}
+.stats__line {
+    position: relative;
+}
+.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.rect-text__numbers {
+    opacity: 0.4;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    top: 10px;
+}
+.rect-text__numbers-2 {
+
+}
+.stats__numbers {
+    display: flex;
+    justify-content: space-between;
+    max-width: 714px;
+}
+.stats__numbers-start {
+    opacity: 0.4;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+.stats__numbers-end {
+    opacity: 0.4;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 section {
     background-color: black;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 .about__content {
     padding-top: 100px;
@@ -127,6 +189,29 @@ section {
     font-weight: bold;
     font-size: 48px;
     line-height: 67px;
+}
+.timer_ {
+    margin: 0;
+}
+.timer__table {
+    border-spacing: 30px;
+    margin-left: -30px;
+}
+.timer__table td {
+    padding: 30px 30px 20px 30px;
+    max-width: 110px;
+    font-size: 16px;
+    text-align: center;
+    color: grey;
+    align-items: center;
+}
+.timer__table tr {
+    background: #121212;
+}
+.timer__table td span {
+    font-size: 36px;
+    color: #fff;
+    font-weight: bold;
 }
 .start__content {
     display: flex;
@@ -147,10 +232,13 @@ section {
 .infographic__text p {
     flex: 1;
 }
+.infographic__rectangles svg:not(:first-of-type) {
+    margin-left: -6px;
+}
 .start__content-subtitle {
     max-width: 411px;
     opacity: 0.5;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 .infographic__stats,
 .infographic__rectangles,
@@ -211,7 +299,7 @@ section {
 .logo-2 {
     margin-right: 20px;
 }
-.partners__logo {
+.partners__logos {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -219,10 +307,17 @@ section {
     align-content: center;
 }
 .partners__logos-img {
-    padding: 29px 60px;
+    padding: 29px 63px;
     border-right: 1px solid grey;
     border-bottom: 1px solid grey;
 }
+.partners__logos-img:nth-of-type(4n) {
+    border-right: none;
+}
+.partners__logos-img:nth-of-type(n+5) {
+    border-bottom: none;
+}
+
 .logo-education {
     transform: rotate(135deg);
 }
@@ -317,8 +412,7 @@ section {
     border: 1px solid #FFFFFF;
     border-radius: 50px;
     background-color: transparent;
-    transition: color .5s ease-in-out,
-    box-shadow .5s ease-in-out;
+    transition: all .7s ease-in-out;
 }
 .teachers__content-button:hover {
     background: #fff;
