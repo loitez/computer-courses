@@ -1,32 +1,73 @@
-// Set the date we're counting down to
-var countDownDate = new Date("Nov 10, 2021 15:37:25").getTime();
+// timer
+let countDownDate = new Date("Nov 18, 2023 15:37:25").getTime();
 
-// Update the count down every 1 second
-var x = setInterval(function() {
+let x = setInterval(function() {
 
-    // Get todays date and time
-    var now = new Date().getTime();
+    let now = new Date().getTime();
 
-    // Find the distance between now an the count down date
-    var distance = countDownDate - now;
+    let distance = countDownDate - now;
 
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 
-
-    // Display the result in an element with id="demo"
     document.querySelector(".timer").innerHTML = `<table class="timer__table">
         <tr><td><span>${days}</span> Дней</td><td><span>${hours}</span> Часов</td><td><span>${minutes}</span> Минут</td><td><span>${seconds}</span> Секунд</td></tr>
         </table>`;
 
 
-    // If the count down is finished, write some text
     if (distance < 0) {
         clearInterval(x);
         document.querySelector(".timer").innerHTML = "EXPIRED";
     }
 }, 1000);
+
+// burger menu
+
+const burgerIcon = document.querySelector('.burger-icon')
+const menu = document.querySelector('.navbar__menu')
+const overlay = document.querySelector('.overlay')
+
+burgerIcon.addEventListener('click', () => {
+    toggleClass(menu)
+})
+
+document.addEventListener('click', (event) => {
+    const target = event.target;
+    if (target.classList.contains('overlay')) {
+        menu.classList.remove('active')
+        toggleOverlay()
+    }
+})
+
+function toggleClass (element) {
+    element.classList.toggle('active')
+    toggleOverlay()
+}
+
+function toggleOverlay() {
+    if (menu.classList.contains('active')) {
+        overlay.classList.add('active')
+    } else {
+        overlay.classList.remove('active')
+    }
+}
+
+// teachers
+ const teacherCards = document.querySelectorAll('.teachers__content-card')
+const teacherBtns = document.querySelectorAll('.teachers__content-button')
+
+teacherCards.forEach((item) => {
+    item.onmouseover = () => {
+        toggleClass(item)
+        const btn = item.querySelector('.teachers__content-button')
+        toggleClass(btn)
+    }
+    item.onmouseout = () => {
+        toggleClass(item)
+        const btn = item.querySelector('.teachers__content-button')
+        toggleClass(btn)
+    }
+})

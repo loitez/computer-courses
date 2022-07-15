@@ -2,64 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Курс по компьютерной сборке</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-<header class="header">
+<div class="overlay"></div>
+<header class="header" id="#main">
     <div class="navbar">
-        <a href="" class="logo">
+        <a href="" class="logo" title="На главную">
             <img src="img/logo.svg" alt="Логотип" class="logo__img">
         </a>
         <nav class="navbar__menu">
             <ul class="navbar__list">
                 <li class="navbar__item">
-                    <a href="#" class="navbar__link">Главная</a>
+                    <a href="#main" class="navbar__link">Главная</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="#" class="navbar__link">Курсы</a>
+                    <a href="#about" class="navbar__link">О нас</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="#" class="navbar__link">Расписание</a>
+                    <a href="#partners" class="navbar__link">Партнеры</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="#" class="navbar__link">Преподаватели</a>
+                    <a href="#programme" class="navbar__link">Программа</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="#" class="navbar__link">Рассылка</a>
+                    <a href="#teachers" class="navbar__link">Преподаватели</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="#" class="navbar__link">Контакты</a>
+                    <a href="#contacts" class="navbar__link">Контакты</a>
                 </li>
             </ul>
         </nav>
-        <div>
-            <button class="button header__button">
-                Зайти в кабинет
-            </button>
-        </div>
+        <svg width="24" height="19" viewBox="0 0 24 19" fill="none" xmlns="http://www.w3.org/2000/svg" class="burger-icon">
+            <line y1="1" x2="24" y2="1" stroke="white" stroke-width="2"/>
+            <line y1="10" x2="24" y2="10" stroke="white" stroke-width="2"/>
+            <line y1="18" x2="24" y2="18" stroke="white" stroke-width="2"/>
+        </svg>
+        <button class="button header__button">
+            <span class="login">Зайти в кабинет</span>
+            <i class="fa-solid fa-right-to-bracket"></i>
+        </button>
     </div>
     <div class="container">
         <div class="main-screen">
             <div class="main-screen__content">
-            <h1 class="main-screen__title">
-                Первый курс по компьютерной сборке
-            </h1>
-            <div>
+                <h1 class="main-screen__title">
+                    Первый курс по компьютерной сборке
+                </h1>
                 <p class="timer" style="font-size:30px"></p>
-            </div>
             </div>
         </div>
     </div>
     <div class="main-screen__bottom">
         <div class="container main-screen__bottom-content">
-        <div>
             <button class="button main-screen__button">Заказать курс</button>
-        </div>
         <table class="main-screen__table">
             <tbody>
             <tr class="main-screen__tr">
@@ -92,7 +97,7 @@
     </div>
 </header>
 <main>
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <div class="about__content">
                 <div class="about__content-picture">
@@ -195,7 +200,7 @@
             </div>
         </div>
     </section>
-    <section class="partners">
+    <section class="partners" id="partners">
         <div class="container">
             <div class="partners__content">
                 <div class="partners__content-title">
@@ -216,7 +221,7 @@
             </div>
         </div>
     </section>
-    <section class="education">
+    <section class="education" id="programme">
         <div class="container">
             <div class="education__content">
                 <img src="img/logo-2.png" alt="Логотип" class="logo-2 logo-education">
@@ -256,7 +261,7 @@
             </div>
         </div>
     </section>
-    <section class="teachers">
+    <section class="teachers" id="teachers">
         <div class="container">
             <div class="teachers__content">
                 <div class="teachers__content-title">
@@ -264,43 +269,101 @@
                     <h2 class="title">Ваши преподаватели</h2>
                 </div>
                 <div class="teachers__content-list">
-                    <div class="teachers__content-card">
-                        <img src="img/photo-1.png" alt="Фото преподавателя" class="teachers__content-img">
-                        <p class="teachers__content-name">Дмитрий Иванов</p>
-                        <p class="teachers__content-desc">Специалист по видеокартам</p>
-                        <button class="button teachers__content-button">Биография</button>
-                    </div>
-                    <div class="teachers__content-card">
-                        <img src="img/photo-2.png" alt="Фото преподавателя" class="teachers__content-img">
-                        <p class="teachers__content-name">Дмитрий Иванов</p>
-                        <p class="teachers__content-desc">Специалист по видеокартам</p>
-                        <button class="button teachers__content-button">Биография</button>
-                    </div>
-                    <div class="teachers__content-card">
-                        <img src="img/photo-3.png" alt="Фото преподавателя" class="teachers__content-img">
-                        <p class="teachers__content-name">Дмитрий Иванов</p>
-                        <p class="teachers__content-desc">Специалист по видеокартам</p>
-                        <button class="button teachers__content-button">Биография</button>
-                    </div>
+                    <a href="">
+                        <div class="teachers__content-card">
+                            <img src="img/photo-1.png" alt="Фото преподавателя" class="teachers__content-img">
+                            <p class="teachers__content-name">Дмитрий Иванов</p>
+                            <p class="teachers__content-desc">Специалист по видеокартам</p>
+                            <button class="button teachers__content-button">Биография</button>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="teachers__content-card">
+                            <img src="img/photo-2.png" alt="Фото преподавателя" class="teachers__content-img">
+                            <p class="teachers__content-name">Дмитрий Иванов</p>
+                            <p class="teachers__content-desc">Специалист по видеокартам</p>
+                            <button class="button teachers__content-button">Биография</button>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="teachers__content-card">
+                            <img src="img/photo-3.png" alt="Фото преподавателя" class="teachers__content-img">
+                            <p class="teachers__content-name">Дмитрий Иванов</p>
+                            <p class="teachers__content-desc">Специалист по видеокартам</p>
+                            <button class="button teachers__content-button">Биография</button>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 </main>
-<footer class="footer">
+<footer class="footer" id="contacts">
     <div class="container">
         <div class="footer__content">
             <h3 class="title">Статьи каждую неделю</h3>
             <p class="subtitle">Больше 90% учеников прошли полный курс и смогли собрать свой первый компьютер</p>
-            <form class="footer__form">
+            <form class="footer__form" method="post">
                 <input type="email" class="button footer__email" name="email" placeholder="E-mail">
                 <input type="submit" class="button footer__follow" value="Подписаться">
             </form>
             <div class="social-media">
-                <a href="#" class="social-media__icon-link"><img src="img/vk.svg" alt="vk" class="social-media__icon"></a>
-                <a href="#" class="social-media__icon-link"><img src="img/youtube.svg" alt="youtube" class="social-media__icon"></a>
-                <a href="#" class="social-media__icon-link"><img src="img/facebook.svg" alt="facebook" class="social-media__icon"></a>
-                <a href="#" class="social-media__icon-link"><img src="img/instagram.svg" alt="instagram" class="social-media__icon"></a>
+
+                <a href="#" class="social-media__icon-link">
+                    <svg class="social-media__icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="25" cy="25" r="25" fill="url(#paint0_linear_38507_2)"/>
+                        <g clip-path="url(#clip0_38507_2)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M34.3625 27.7577C34.3625 27.7577 36.3029 29.6741 36.7829 30.5609C36.7922 30.5736 36.7995 30.5878 36.8045 30.6029C37.0001 30.9305 37.0481 31.1873 36.9521 31.3769C36.7901 31.6901 36.2417 31.8473 36.0557 31.8605H32.6261C32.3873 31.8605 31.8905 31.7981 31.2857 31.3805C30.8237 31.0577 30.3641 30.5261 29.9189 30.0065C29.2541 29.2349 28.6793 28.5653 28.0973 28.5653C28.0238 28.5651 27.9508 28.5773 27.8813 28.6013C27.4409 28.7405 26.8817 29.3681 26.8817 31.0397C26.8817 31.5629 26.4689 31.8605 26.1797 31.8605H24.6089C24.0737 31.8605 21.2873 31.6733 18.8165 29.0681C15.7889 25.8785 13.0697 19.48 13.0433 19.4236C12.8741 19.0096 13.2293 18.784 13.6133 18.784H17.0765C17.5409 18.784 17.6921 19.0648 17.7977 19.3168C17.9201 19.606 18.3737 20.7628 19.1177 22.0624C20.3225 24.1768 21.0629 25.0373 21.6545 25.0373C21.7657 25.0376 21.8749 25.0086 21.9713 24.9533C22.7441 24.5285 22.6001 21.7684 22.5641 21.1996C22.5641 21.0892 22.5629 19.9672 22.1669 19.4248C21.8837 19.036 21.4013 18.8848 21.1097 18.8296C21.1877 18.7168 21.3533 18.544 21.5657 18.442C22.0949 18.178 23.0513 18.1396 24.0005 18.1396H24.5273C25.5569 18.154 25.8233 18.22 26.1977 18.3148C26.9513 18.4948 26.9657 18.9832 26.8997 20.6464C26.8805 21.1216 26.8601 21.6568 26.8601 22.2868C26.8601 22.4212 26.8541 22.5712 26.8541 22.7236C26.8313 23.5768 26.8013 24.5381 27.4037 24.9329C27.4818 24.9815 27.5721 25.0073 27.6641 25.0072C27.8729 25.0072 28.4981 25.0072 30.1937 22.0972C30.9377 20.812 31.5137 19.2964 31.5533 19.1824C31.5869 19.1188 31.6877 18.94 31.8101 18.868C31.8972 18.8217 31.9947 18.7986 32.0933 18.8008H36.1673C36.6113 18.8008 36.9125 18.868 36.9713 19.036C37.0697 19.3084 36.9521 20.14 35.0921 22.6552C34.7789 23.074 34.5041 23.4365 34.2629 23.7533C32.5769 25.9661 32.5769 26.0777 34.3625 27.7577Z" fill="white"/>
+                        </g>
+                        <defs>
+                            <linearGradient id="paint0_linear_38507_2" x1="5.1105" y1="-5.43152e-06" x2="48.2386" y2="3.21466" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#C89AFC"/>
+                                <stop offset="1" stop-color="#7C6AFA"/>
+                            </linearGradient>
+                            <clipPath id="clip0_38507_2">
+                                <rect x="13" y="13" width="24" height="24" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+                <a href="#" class="social-media__icon-link">
+                    <svg class="social-media__icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="25" cy="25" r="25" fill="url(#paint0_linear_38507_3)"/>
+                        <path d="M35.0576 19.9454C34.9381 19.5014 34.7041 19.0966 34.3789 18.7715C34.0538 18.4464 33.649 18.2124 33.2051 18.0929C31.5701 17.6504 25.0001 17.6504 25.0001 17.6504C25.0001 17.6504 18.4301 17.6504 16.7951 18.0929C16.3511 18.2124 15.9463 18.4464 15.6212 18.7715C15.2961 19.0966 15.0621 19.5014 14.9426 19.9454C14.6373 21.6128 14.4891 23.3053 14.5001 25.0004C14.4891 26.6955 14.6373 28.3879 14.9426 30.0554C15.0621 30.4994 15.2961 30.9042 15.6212 31.2293C15.9463 31.5544 16.3511 31.7884 16.7951 31.9079C18.4301 32.3504 25.0001 32.3504 25.0001 32.3504C25.0001 32.3504 31.5701 32.3504 33.2051 31.9079C33.649 31.7884 34.0538 31.5544 34.3789 31.2293C34.7041 30.9042 34.9381 30.4994 35.0576 30.0554C35.3629 28.3879 35.511 26.6955 35.5001 25.0004C35.511 23.3053 35.3629 21.6128 35.0576 19.9454ZM22.9001 28.1504V21.8504L28.3526 25.0004L22.9001 28.1504Z" fill="white"/>
+                        <defs>
+                            <linearGradient id="paint0_linear_38507_3" x1="5.1105" y1="-5.43152e-06" x2="48.2386" y2="3.21466" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#C89AFC"/>
+                                <stop offset="1" stop-color="#7C6AFA"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </a>
+                <a href="#" class="social-media__icon-link">
+                    <svg class="social-media__icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="25" cy="25" r="25" fill="url(#paint0_linear_38507_4)"/>
+                        <path d="M26.397 33.9972V25.8012H29.162L29.573 22.5922H26.397V20.5482C26.397 19.6222 26.655 18.9882 27.984 18.9882H29.668V16.1272C28.8487 16.0394 28.0251 15.997 27.201 16.0002C24.757 16.0002 23.079 17.4922 23.079 20.2312V22.5862H20.332V25.7952H23.085V33.9972H26.397Z" fill="white"/>
+                        <defs>
+                            <linearGradient id="paint0_linear_38507_4" x1="5.1105" y1="-5.43152e-06" x2="48.2386" y2="3.21466" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#C89AFC"/>
+                                <stop offset="1" stop-color="#7C6AFA"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </a>
+                <a href="#" class="social-media__icon-link">
+                    <svg class="social-media__icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="25" cy="25" r="25" fill="url(#paint0_linear_38507_5)"/>
+                        <path d="M29.5 13H20.5C16.3585 13 13 16.3585 13 20.5V29.5C13 33.6415 16.3585 37 20.5 37H29.5C33.6415 37 37 33.6415 37 29.5V20.5C37 16.3585 33.6415 13 29.5 13ZM34.75 29.5C34.75 32.395 32.395 34.75 29.5 34.75H20.5C17.605 34.75 15.25 32.395 15.25 29.5V20.5C15.25 17.605 17.605 15.25 20.5 15.25H29.5C32.395 15.25 34.75 17.605 34.75 20.5V29.5Z" fill="white"/>
+                        <path d="M25 19C21.6865 19 19 21.6865 19 25C19 28.3135 21.6865 31 25 31C28.3135 31 31 28.3135 31 25C31 21.6865 28.3135 19 25 19ZM25 28.75C22.933 28.75 21.25 27.067 21.25 25C21.25 22.9315 22.933 21.25 25 21.25C27.067 21.25 28.75 22.9315 28.75 25C28.75 27.067 27.067 28.75 25 28.75Z" fill="white"/>
+                        <path d="M31.4479 19.35C31.8895 19.35 32.2474 18.992 32.2474 18.5505C32.2474 18.1089 31.8895 17.751 31.4479 17.751C31.0064 17.751 30.6484 18.1089 30.6484 18.5505C30.6484 18.992 31.0064 19.35 31.4479 19.35Z" fill="white"/>
+                        <defs>
+                            <linearGradient id="paint0_linear_38507_5" x1="5.1105" y1="-5.43152e-06" x2="48.2386" y2="3.21466" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#C89AFC"/>
+                                <stop offset="1" stop-color="#7C6AFA"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </a>
             </div>
         </div>
     </div>
